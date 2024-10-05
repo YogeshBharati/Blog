@@ -1,0 +1,11 @@
+{% extends "blog2app/base.html" %}
+
+{% block title %}Single Post{% endblock title %}
+
+{% block content %}
+<h1>{{post.title}}</h1>
+<p>
+   {{post.content}}
+</p>
+<a href="{% url 'homepage' %}">Go to Home</a>
+{% endblock content %}

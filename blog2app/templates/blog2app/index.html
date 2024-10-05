@@ -1,0 +1,16 @@
+{% extends "blog2app/base.html" %}
+
+{% block title %}
+Welcome to My Website
+{% endblock title %}
+
+{% block content %}
+<h1>Welcome to Yogesh Blog </h1>
+<ul>
+{% for post in posts %}
+<li><a href= "{% url "single" post.id %}">{{post.title}}</a></li>
+{% endfor %}
+</ul>
+
+  
+{% endblock content %}
